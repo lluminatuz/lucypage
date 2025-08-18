@@ -3,6 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #2563eb;
+  --primary-blue-light: #3b82f6;
+  --primary-green: #22c55e;
+  --text-gray: #374151;
+  --text-gray-light: #6b7280;
+  --bg-gray-light: #f3f4f6;
+  --bg-white: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --background: #111827;
+  --foreground: #f9fafb;
+  --primary-blue: #3b82f6;
+  --primary-blue-light: #60a5fa;
+  --primary-green: #34d399;
+  --text-gray: #d1d5db;
+  --text-gray-light: #9ca3af;
+  --bg-gray-light: #1f2937;
+  --bg-white: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 @theme inline {
@@ -23,4 +44,47 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue-light);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--bg-gray-light);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--primary-blue-light);
+}
+
+/* Dark mode utility classes */
+.dark {
+  --background: #111827;
+  --foreground: #f9fafb;
+}
+
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
 }
