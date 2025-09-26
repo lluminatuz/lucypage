@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --bg-sobre: #f1e9dd; /* Tan */
-  --bg-portfolio: #e0cfb7; /* Sienna */
-  --bg-contato: #f1e9dd; /* SaddleBrown */
+  --bg-sobre: #f1e9dd; /* light */
+  --bg-portfolio: #e0cfb7;
+  --bg-contato: #f1e9dd;
+  --text-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.5);
+  --card-border: rgba(0, 0, 0, 0.1);
+}
+
+html.dark {
+  --bg-sobre: #0f0f0f; /* dark surfaces */
+  --bg-portfolio: #1a1a1a;
+  --bg-contato: #0f0f0f;
+  --text-color: #e5e7eb;
+  --card-bg: transparent;
+  --card-border: rgba(255, 255, 255, 0.2);
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-sobre);
-  color: #333;
+  color: var(--text-color);
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 section#about {
@@ -33,7 +47,7 @@ section#contact {
 
 header, footer {
   background-color: var(--bg-sobre);
-  color: #333;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -64,13 +78,10 @@ html {
     font-family: 'Playfair Display', serif;
 }
 
-body {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
+.card-module {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-body.dark {
-  background-color: black;
-  color: white;
-}
+/* remove duplicate body styles; colors now driven by CSS variables above */
