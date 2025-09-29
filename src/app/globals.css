@@ -1,90 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-blue: #2563eb;
-  --primary-blue-light: #3b82f6;
-  --primary-green: #22c55e;
-  --text-gray: #374151;
-  --text-gray-light: #6b7280;
-  --bg-gray-light: #f3f4f6;
-  --bg-white: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --bg-sobre: #f1e9dd; /* light */
+  --bg-portfolio: #e0cfb7;
+  --bg-contato: #f1e9dd;
+  --text-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.5);
+  --card-border: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] {
-  --background: #111827;
-  --foreground: #f9fafb;
-  --primary-blue: #3b82f6;
-  --primary-blue-light: #60a5fa;
-  --primary-green: #34d399;
-  --text-gray: #d1d5db;
-  --text-gray-light: #9ca3af;
-  --bg-gray-light: #1f2937;
-  --bg-white: #374151;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  --bg-sobre: #0f0f0f; /* dark surfaces */
+  --bg-portfolio: #1a1a1a;
+  --bg-contato: #0f0f0f;
+  --text-color: #e5e7eb;
+  --card-bg: transparent;
+  --card-border: rgba(255, 255, 255, 0.2);
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-sobre);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Smooth transitions for dark mode */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+section#about {
+  background-color: var(--bg-sobre);
+  margin: 0;
 }
 
-/* Custom scrollbar for dark mode */
-::-webkit-scrollbar {
-  width: 8px;
+section#portfolio {
+  background-color: var(--bg-portfolio);
+  padding-top: 2rem;
+  margin: 0;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-gray-light);
+section#contact {
+  background-color: var(--bg-contato);
+  padding-top: 2rem;
+  margin: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary-blue);
-  border-radius: 4px;
+header, footer {
+  background-color: var(--bg-sobre);
+  color: var(--text-color);
+  margin: 0;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-blue-light);
+html {
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
-[data-theme="dark"] ::-webkit-scrollbar-track {
-  background: var(--bg-gray-light);
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
-  background: var(--primary-blue-light);
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Dark mode utility classes */
-.dark {
-  --background: #111827;
-  --foreground: #f9fafb;
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 
-.light {
-  --background: #ffffff;
-  --foreground: #171717;
+.font-playfair {
+    font-family: 'Playfair Display', serif;
 }
+
+.card-module {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* remove duplicate body styles; colors now driven by CSS variables above */
