@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Portfólio — Lucinei Verneque
 
-## Getting Started
+Site de portfólio desenvolvido com Next.js (App Router) e Tailwind CSS. O projeto apresenta as seções Sobre, Portfólio, Serviços e Contato, com design responsivo e suporte a modo claro/escuro.
 
-First, run the development server:
+### Principais recursos
+- Responsivo para celulares, tablets e desktops
+- Alternância de tema (modo claro/escuro) com persistência em `localStorage`
+- Seção Sobre com texto sobreposto à imagem apenas no mobile
+- Botão “Fale Comigo” com link direto para WhatsApp
+- Seção Contato com logos do Instagram e WhatsApp
+- Tipografia com Playfair Display
+
+---
+
+## Tecnologias
+- Next.js 14 (App Router)
+- React 18
+- TypeScript
+- Tailwind CSS
+
+---
+
+## Executar localmente
+Pré-requisitos: Node.js 18+ e npm.
 
 ```bash
+# instalar dependências
+npm install
+
+# executar em desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# acessar
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Scripts úteis:
+- `npm run dev`: ambiente de desenvolvimento
+- `npm run build`: build de produção
+- `npm run start`: servir build de produção
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura do projeto
+```text
+src/
+  app/
+    layout.tsx        # layout raiz (inclui globals.css)
+    page.tsx          # página principal com as seções
+    globals.css       # estilos globais + variáveis de tema
+public/
+  v.png               # logotipo
+  ...                 # imagens e fontes
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Personalização
+- Conteúdo: edite `src/app/page.tsx`.
+- Cores/tema: ajuste variáveis em `src/app/globals.css` (`:root` e `html.dark`).
+- Fontes: `public/Playfair_Display` e classe utilitária `font-playfair`.
+- Ícones/Logos: substitua arquivos em `public/` e atualize os caminhos em `page.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
+- Vercel (recomendado): crie o projeto e conecte o repositório. A build padrão do Next.js é detectada automaticamente.
+- Outra plataforma: execute `npm run build` e sirva com `npm start` em um ambiente Node 18+.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licença
+Este projeto é de uso pessoal do(a) autor(a). Ajuste conforme sua necessidade antes de tornar público.
