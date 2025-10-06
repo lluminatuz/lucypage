@@ -43,7 +43,7 @@ export default function Home() {
           </button>
           <nav className="order-3 basis-full w-full md:order-2 md:basis-auto md:w-auto flex flex-wrap items-center justify-end gap-2 sm:gap-3 font-bold font-playfair text-sm sm:text-base">
             <a href="#about" className="hover:underline">Sobre</a>
-            <a href="#portfolio" className="hover:underline">Portifolio</a>
+            <a href="#portfolio" className="hover:underline">Portifólio</a>
             <a href="#serviços" className="hover:underline">Serviços</a>
             <a href="#contact" className="hover:underline">Contato</a>
           </nav>
@@ -79,18 +79,18 @@ export default function Home() {
         </section>
 
         <section id="portfolio" className="text-center py-8 md:py-12 px-4">
-          <h2 className="text-2xl mb-8 font-bold font-playfair">Portifolio</h2>
+          <h2 className="text-2xl mb-8 font-bold font-playfair">Portifólio</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <div className="card-module p-6 rounded-lg shadow-md">
               <h3 className="text-lg md:text-xl font-bold font-playfair mb-4">Coaching Pessoal</h3>
               <p className="text-sm md:text-base leading-relaxed">
-                Ajuda você a descobrir seu potencial, definir metas claras e desenvolver estratégias para alcançar seus objetivos pessoais. Trabalhamos juntos para superar limitações e construir uma vida mais plena e realizada.
+                Ajuda a descobrir seu potencial, definir metas claras e desenvolver estratégias para alcançar seus objetivos pessoais. Trabalhamos juntos para superar limitações e construir uma vida mais plena e realizada.
               </p>
             </div>
             <div className="card-module p-6 rounded-lg shadow-md">
               <h3 className="text-lg md:text-xl font-bold font-playfair mb-4">Coaching Financeiro</h3>
               <p className="text-sm md:text-base leading-relaxed">
-                Orienta você na organização das finanças pessoais, criação de orçamentos eficientes e desenvolvimento de uma mentalidade próspera. Aprenda a tomar decisões financeiras inteligentes e construir riqueza de forma sustentável.
+                Oriento na organização das finanças pessoais, criação de orçamentos eficientes e desenvolvimento de uma mentalidade próspera na tomada das decisões financeiras inteligentes e na construção da riqueza de forma sustentável.
               </p>
             </div>
             <div className="card-module p-6 rounded-lg shadow-md">
@@ -112,9 +112,9 @@ export default function Home() {
               </p>
             </div>
             <div className="card-module p-6 rounded-lg shadow-md">
-              <h3 className="text-lg md:text-xl font-bold font-playfair mb-4">Palestras Motivacionais</h3>
+              <h3 className="text-lg md:text-xl font-bold font-playfair mb-4">Palestras</h3>
               <p className="text-sm md:text-base leading-relaxed">
-                Apresentações dinâmicas de 1-2 horas para empresas, instituições e eventos, abordando temas como liderança, inteligência emocional, gestão financeira e desenvolvimento de alta performance.
+                Dinâmicas de 1-2 horas para empresas, instituições e eventos. Abordando temas como liderança, inteligência emocional, gestão financeira e desenvolvimento de alta performance.
               </p>
             </div>
             <div className="card-module p-6 rounded-lg shadow-md">
@@ -128,7 +128,6 @@ export default function Home() {
 
         <section id="contact" className="text-center py-8 md:py-12 px-4">
           <h2 className="text-2xl font-bold font-playfair mb-4">Contato</h2>
-          <p className="mb-4">Entre em contato comigo:</p>
           <div className="flex items-center justify-center gap-6">
             <a
               href="https://instagram.com/lucinei_verneque"
